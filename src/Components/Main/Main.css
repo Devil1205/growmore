@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+}
+
+.main2{
+    margin: 20px 0px;
+}
+
+.main2 div{
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.list{
+    position: relative;
+    /* overflow-y: hidden; */
+}
+
+.list button{
+    position: absolute;
+    left: -35px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    width: 15px;
+    padding: 0;
+    cursor: pointer;
+    top: 10px;
+    background: transparent;
+    border: none;
+    color: grey;
+    border-bottom: 3px solid grey;
+}
+
+.subList{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
