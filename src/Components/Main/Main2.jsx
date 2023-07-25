@@ -62,7 +62,7 @@ function Main2() {
                 temp[deptIndex].forEach((dept,ind)=>{
                     temp[deptIndex][ind]=true;
                 });
-                console.log(temp);
+                // console.log(temp);
                 return temp;
         })}
         else
@@ -73,7 +73,7 @@ function Main2() {
                 temp[deptIndex].forEach((dept,ind)=>{
                     temp[deptIndex][ind]=false;
                 });
-                console.log(temp);
+                // console.log(temp);
                 return temp;
         })}
         setListHead(newArr);
@@ -123,12 +123,12 @@ function Main2() {
             <div>
                 {data.map((dept, deptIndex) => {
                     return (
-                        <FormGroup className='list'>
+                        <FormGroup className='list' key={deptIndex}>
                             <button onClick={(element) => { showHide(element) }}></button>
                             <FormControlLabel control={<Checkbox checked={listHead[deptIndex] === undefined ? true : listHead[deptIndex]} onClick={(element) => { checkUncheck(element, deptIndex) }} />} label={dept.department} className='listHead' style={{ margin: "0px 20px" }} />
                             <div className='subList'>
                                 {dept.sub_departments.map((subElement, subIndex) => {
-                                    return (<FormControlLabel control={<Checkbox checked={subListHead.length === 0 ? true : subListHead[deptIndex][subIndex]} onClick={(element) => { checkAll(element, deptIndex, subIndex) }} onChange={updateCheck} />} label={subElement} style={{ margin: "0px 40px" }} />)
+                                    return (<FormControlLabel key={subIndex} control={<Checkbox checked={subListHead.length === 0 ? true : subListHead[deptIndex][subIndex]} onClick={(element) => { checkAll(element, deptIndex, subIndex) }} onChange={updateCheck} />} label={subElement} style={{ margin: "0px 40px" }} />)
                                 })}</div>
                         </FormGroup>
                     )

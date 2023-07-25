@@ -23,11 +23,11 @@ function Main1({updateMessage}) {
   }
 
     useEffect(() => {
-        // let data=JSON.parse(localStorage.getItem("user"));
-        // if(data===null)
-        //     goToFirst();
-        // else 
-        //   localStorage.clear();
+        let data=JSON.parse(localStorage.getItem("user"));
+        if(data===null)
+            goToFirst();
+        else 
+          localStorage.clear();
         fetchData();
     }, [])
     
